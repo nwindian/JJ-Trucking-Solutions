@@ -7,5 +7,6 @@ namespace MillerTrucking.Models
 {
     public class TruckModel
     {
+        public string Name { get; set; }
     }
 }
