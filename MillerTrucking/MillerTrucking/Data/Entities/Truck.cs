@@ -7,6 +7,7 @@ namespace MillerTrucking.Data.Entities
 {
     public class Truck
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int MinLength { get; set; }
         public int MaxLength { get; set; }

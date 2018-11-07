@@ -1,4 +1,5 @@
-﻿using MillerTrucking.Data.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MillerTrucking.Data.Entities;
 using MillerTrucking.Models;
 using System;
 using System.Collections.Generic;
