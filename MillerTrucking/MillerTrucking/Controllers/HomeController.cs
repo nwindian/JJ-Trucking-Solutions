@@ -14,6 +14,7 @@ namespace MillerTrucking.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult FindTrucks()
         {
             throw new NotImplementedException();

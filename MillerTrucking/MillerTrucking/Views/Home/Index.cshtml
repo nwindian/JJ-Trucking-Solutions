@@ -1,4 +1,6 @@
-﻿<div>
+﻿@model MillerTrucking.Models.SearchModel;
+@using (Html.BeginForm("FindTrucks"))
+{
     <div>
         <label>
             Length
@@ -24,8 +26,8 @@
         <textarea></textarea>
     </div>
     <div>
-        <button>
+        <button type="submit" value="FindTrucks">
             Search
         </button>
     </div>
-</div>
+}
