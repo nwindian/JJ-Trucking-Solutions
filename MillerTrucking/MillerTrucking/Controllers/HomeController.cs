@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MillerTrucking.Models;
 
 namespace MillerTrucking.Controllers
 {
@@ -14,8 +15,8 @@ namespace MillerTrucking.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult FindTrucks()
+        [HttpPost]
+        public IActionResult FindTrucks(SearchModel searchModel)
         {
             throw new NotImplementedException();
         }

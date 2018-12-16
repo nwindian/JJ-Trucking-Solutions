@@ -1,32 +1,35 @@
 ﻿@model MillerTrucking.Models.SearchModel;
-@using (Html.BeginForm("FindTrucks"))
+
+@{ViewBag.Title = "Miller Transfer";}
+
+@using (Html.BeginForm("FindTrucks", "Home"))
 {
     <div>
         <label>
             Length
         </label>
-        <textarea></textarea>
+        @Html.TextBoxFor(m => m.Length)
     </div>
     <div>
         <label>
             Width
         </label>
-        <textarea></textarea>
+        @Html.TextBoxFor(m => m.Width)
     </div>
     <div>
         <label>
             Height
         </label>
-        <textarea></textarea>
+        @Html.TextBoxFor(m => m.Height)
     </div>
     <div>
         <label>
             Weight
         </label>
-        <textarea></textarea>
+        @Html.TextBoxFor(m => m.Weight)
     </div>
     <div>
-        <button type="submit" value="FindTrucks">
+        <button type="submit">
             Search
         </button>
     </div>
