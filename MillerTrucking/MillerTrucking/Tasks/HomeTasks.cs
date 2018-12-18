@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MillerTrucking.Data.Repositories;
+using MillerTrucking.Data.Entities;
+using MillerTrucking.ModelBuilders;
 
 namespace MillerTrucking.Tasks
 {
@@ -12,9 +15,14 @@ namespace MillerTrucking.Tasks
     }
     public class HomeTasks : IHomeTasks
     {
+        private TruckRepository _truckRepository = new TruckRepository();
+        private TruckModelBuilder _truckModelBuilder = new TruckModelBuilder();
+
         public IEnumerable<TruckModel> GetTrucks(SearchModel searchModel)
         {
-            throw new NotImplementedException();
+            IEnumerable<Truck> trucks = _truckRepository.getTrucks(searchModel);
+
+            return _truckModelBuilder.GetTruckModels(trucks);
         }
     }
 }

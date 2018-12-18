@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MillerTrucking.Repositories
+namespace MillerTrucking.Data.Repositories
 {
     public interface ITruckRepository
     {
@@ -14,9 +14,13 @@ namespace MillerTrucking.Repositories
     }
     public class TruckRepository : ITruckRepository
     {
+        private modelContext context = new modelContext();
+
         public IEnumerable<Truck> getTrucks(SearchModel searchModel)
         {
-            throw new NotImplementedException();
+            return context.Truck.Select(t => t)
+                                .Where(t => t.Id == 1)
+                                .ToList();
         }
     }
 }
